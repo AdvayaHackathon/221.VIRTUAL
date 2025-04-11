@@ -320,6 +320,150 @@
         border-radius: var(--bprder-radius);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         display:flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s ease;
+      }
+
+      .history-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .history-date {
+        font-size: 0.85rem;
+        color: var(--gray);
+        font-weight: 500;
+      }
+
+      .history-query {
+        font-weight: 500;
+        color: var(--dark);
+      }
+
+      .history-action {
+        color: var(--gray);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .history-action:hover {
+        color: var(--primary);
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template--columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 992px) {
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .badge { 
+        display: inline-block;
+        padding: 0.35rem 0.75rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .badge-primary {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+
+      .badge-warning {
+        background: #fff3bf;
+        color: #f08c00;
+      }
+
+      .badge-danger {
+        background: #ffc9c9;
+        color: #e03131;
+      }
+
+      .medication-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        background: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .medication-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-light);
+        color: var(--primary);
+        display: flex;
+        align-items: cemter;
+        justify-content: center;
+        margin-right: 1rem;
+        flex-shrink:0;
+      }
+
+      .medication-info {
+        flex: 1;
+      }
+
+      .medication-name {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .medication-dosage {
+        font-size: 0.85rem;
+        color: var(--gray);
+      }
+
+      .medication-time {
+        font-size: 0.85rem;
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .tab-container {
+        margin: 2rem 0;
+      }
+
+      .tabs {
+        display: flex;
+        border-bottom: 1px solid var(--light-gray);
+        margin-bottom: 1.5rem;
+      }
+
+      .tab {
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--gray);
+        position: relative;
+      }
+
+      .tab-active {
+        color: var(--primary);
+      }
+
+      .tab.active::after {
+        content: '';
+        position
+        
+        
+      
+        
+
+      
         
         
       
