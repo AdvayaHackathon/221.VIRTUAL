@@ -251,8 +251,49 @@
         <div class="step-label">Medication Results</div>
       </div>
 
-      <from id="medicationForm">
+      <form id="medicationForm">
         <div class="form-section active"id="symptoms-section">
+          <h2><i class="fas fa-thermometer-half"></i>What Symptoms are you experiencing?</h2>
+
+          <div class="form-group">
+            <label>primary Symptoms</label>
+            <slect class="form-control" id="primarySymptoms" required>
+              <option value="">Select your main symptom</option>
+              <option value="headache">Headache</option>
+              <option vlaue="fever">Fever</option>
+              <option value="cough">Cough</option>
+              <option value="sore throat">Sore throat</option>
+              <option value="body aches">Body aches</option>
+              <option value="heartburn">Heartburn</option>
+              <option value="diarrhea">diarrhea</option>
+              <option value="constipation">Constipation</option>
+              <option value="rash">Rash</option>
+            </slect>
+          </div>
+
+          <div class="form-group">
+            <label>Additional Symptoms (Select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="fever"> Fever
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="chills"> Chills
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="fatigue"> Fatigue
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="nausea"> Nausea
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="dizziness"> Dizziness
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="symptoms" value="sneezing"> Sneezing
+              </label>
+            </div>
+          </div>
             
 
           
