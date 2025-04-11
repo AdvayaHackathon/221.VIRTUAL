@@ -212,9 +212,88 @@
       transition: all 0.3s ease;
     }
 
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow:0 0 0 3px rgba(0, 102, 204, 0.2);
+    }
+
+    .checkbox-gorup{
+      diaplay: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .checkbox-item:hover{
+      background: var(--primary-light);
+    }
+
+    .checkbox-item input{
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    .btn-primary{
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+    }
+
+    .btn-primary:hover{
+      background: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
+    }
     
-    
-      
+    .btn-primary{
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .btn-outline:hover{
+      background: var(--primary-light);
+    }
+    .btn-group{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .result-container{
+      display: none;
+    }
+
+    .medication-card{
+      background: white;
+      border-radius: var(--border-radius);
+      padding:20px;
+      margin-bottom: 20px;
+      box-shodow: var(--box-shadow);
+      border-left: 4px solid var(--primary);
+    }
+    .medication-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    .medication-name{
+      font-size:1.3rem;
+      color: var(--primary);
+    }
       
       
       
@@ -355,22 +434,22 @@
                 <input type="checkbox" name="conditions" value="diabetes">High Blood Pressure
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="heart disease">High Blood Pressure
+                <input type="checkbox" name="conditions" value="heart disease">Heart Disease
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="liver disease">High Blood Pressure
+                <input type="checkbox" name="conditions" value="liver disease">Liver Disease
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="hight blood pressure">High Blood Pressure
+                <input type="checkbox" name="conditions" value="kidney disease">Kidney Disease
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="hight blood pressure">High Blood Pressure
+                <input type="checkbox" name="conditions" value="asthma">Asthma
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="hight blood pressure">High Blood Pressure
+                <input type="checkbox" name="conditions" value="pregnant">Pregnant or Breastfeeding
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="conditions" value="hight blood pressure">High Blood Pressure
+                <input type="checkbox" name="conditions" value="none">None of the above
               </label>
 
           
