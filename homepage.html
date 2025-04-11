@@ -109,7 +109,7 @@
           font-weight: 500;
           cursor: pointer;
           transition: var(--transition);
-          border: none:
+          border: none;
           display: inline-flex;
           align-items: center;
           gap: 8px;
@@ -148,7 +148,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center:
+        text-align: center;
         padding: 6rem 2rem;
         background: linear-gradient(135deg, #f7fafc, #ebf8ff);
         position: relative;
@@ -162,7 +162,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('#')
+        background: url('#');
         opacity: 0.1;
         z-index: 0;
       }
@@ -271,7 +271,7 @@
       
       .steps {
         display: flex;
-        justify-content: center:
+        justify-content: center;
         gap: 2rem;
         max-width: 1000px;
         margin: 3rem auto 0;
@@ -544,7 +544,7 @@
       const signupmodal = document.getElementById('signup-modal');
       const closeModalBtns = document.querySelectorAll('.close-modal');
       const switchToSignup = document.getElementById('switch-to-signup');
-      const switchToLogin = document.getElementById('switch-to-login);
+      const switchToLogin = document.getElementById('switch-to-login');
 
       // Open login modal
 function openLoginModal() {
@@ -571,13 +571,13 @@ function closeModals() {
 loginBtn.addEventListener('click', openLoginModal);
 signupBtn.addEventListener('click', openSignupModal);
 heroCta.addEventListener('click', openSignupModal);
-ctaBtn.addEventListener('click', openSignupmodal
+ctaBtn.addEventListener('click', openSignupmodal);
 
 closeModalBtns.forEach(btn => {
     btn.addEventListener('click', closeModals);
 });
 
-switchToSignup.addEventListener('click', functions(e) {
+switchToSignup.addEventListener('click', function(e) {
     e.preventDefault();
     openSignupModal();
 });
@@ -591,6 +591,7 @@ switchToLogin.addEventListener('click', function(e) {
 window.addEventListener('click', function(e) {
   if (e.target === loginModal || e.target === signupModal) {
       closeModals();
+  }
 });
 
 // Form submissions 
