@@ -293,12 +293,136 @@
     .medication-name{
       font-size:1.3rem;
       color: var(--primary);
+      margin: 0;
     }
-      
-      
-      
-    
-    
+    .madication-type{
+      display: inline-block;
+      padding: 4px 10px;
+      background-color: var(--primary-light);
+      color:var(--primary);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .medication-details{
+      margin-bottom: 15px;
+    }
+
+    .detail-row{
+      display: flex;
+      margin-bottom: 8px;
+    }
+
+    .detail-label{
+      font-weight: 500;
+      min-width: 120px;
+      color: var(--gray);
+    }
+    .detail-value{
+      flex: 1;
+    }
+
+    .warning {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .loading-spinner {
+      display: none;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .spinner{
+      width: 40px;
+      height: 40px;
+      border: 4px solid var(--primary-light);
+      border-top: 4px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+
+    @keyframes spin{
+      0% {transform: rotate(0deg);}
+      100%{transform: rotate(360deg);}
+    }
+
+    .disclaimer{
+      background: var(--light);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    .disclaimer strong{
+      color: var(--danger);
+    }
+
+    footer{
+      text-align: center;
+      padding: 30px 0;
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-top:50px;
+    }
+
+    @media (max-width: 786px) {
+      .container {
+        padding: 15px;
+      }
+
+      .header-content{
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .progress-bar{
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .progress-step{
+        flex: 0 0 calc(50%-15px);
+      }
+      progress-bar::before{
+        display:none;
+      }
+
+      .form-section{
+        padding: 20px;
+      }
+
+      .checkbox-item{
+        flex: 1 1 100%;
+      }
+
+      .btn-group{
+        flex-direction: column;
+        gap: 10px;
+      }
+      .btn-group{
+        flex-direction: column;
+        gap 10px;
+      }
+      .btn:{
+        width: 100%;
+      }
+
+      .medication-header{
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .detail-row{
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .detail-label{
+        min-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
