@@ -35,6 +35,116 @@
               <span class="badge badge-danger">Triggers: Stress</span>
             </div>
         </div>
+        <div class="action-bts">
+          <div class="index-btn">
+            <a href="index.html"><button type="button" class="index-btn-click"> Adviser</button></a>
+          </div>
+          <div class="logout-btn">
+            <a href="login.html"><button type="button" class="index-btn-click"> logout</button></a>
+          </div>
+          <div class="profile-actions">
+            <button class="action-btn" onclick="toggleNotifications()">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="action-btn" onclick="toggleMenu()">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+          <div class="dropdown-content" id="profileMenu">
+            <h3 class="dropdown-title">
+              <span>Personal Details</span>
+              <i class="fas fa times" onclick="toggleMenu()"></i>
+            </h3>
+            <div class="personal-detail">
+              <span class="detail-label">Full Name:</span>
+              <span class="detail-value" id="menuName">John Doe</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Date of Birth:</span>
+              <span class="detail-value" id="menuDob">June 15, 1991</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Gender:</span>
+              <span class="detail-value" id="menuGender">Male</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Blood Type:</span>
+              <span class="detail-value" id="menuBlood">A+</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Allergies:</span>
+              <span class="detail-value" id="menuAllergies">None</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Emergency Contact:</span>
+              <span class="detail-value" id="menuEmergency">Jane Doe(Wife) +1 234 567 891</span>
+            </div>
+            <div class="personal-detail">
+              <span class="detail-label">Primary Physician:</span>
+              <span class="detail-value" id="menuPhysician">Dr. Sarah Smith</span>
+            </div>
+            <button class="btn btn-primary" onclick="editDetails()" style="margin-top: 1rem; width: 100%;">
+              <i class="fas fa-edit"></i> Edit Profile
+            </button>
+            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+              <a href="login.html"><i class="fas fa-logout"></i> logout</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="tab-container">
+          <div class="tabs">
+            <div class="tab active" on-click="switchTab('overview')">Overview</div>
+            <div class="tab" onclick="switchTab('health')">Health Data</div>
+            <div class="tab" on-click="switchTab('history')">History</div>
+            <div class="tab" on-click="switchTab('medications')">Medications</div>
+          </div>
+
+          <div id="overview" class="tab-content active">
+            <div class="grid-container">
+              <div>
+               <div class="card">
+                 <h3 class="card-title"><i class="fas fa-heartbeat"></i> Current Health Status</h3>
+                 <div class="advice-box">
+                   <h4 class="advice-title">Diagnosed Condition: Migraine</h4>
+                   <p>Last Updated: March 18, 2025 by Dr.Sarah Smith</p>
+                   <u1 style="margin-top: 1rem; padding-left: 1.2rem;">
+                     <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> Maintain regular sleep schedule (7-8 hours)</li>
+                     <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> Stay hydrated (2-3L water daily)</li>
+                     <li style="margin-bottom: 0.5rem;"><i class="fas fa-chech-circle" style="color: var(--primary);"></i>Avoid caffeine and alcohol</li>
+                     <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i>Use prescribed medications as directed</li>
+                     <li><i class="fas fa-check-circle" style="color: var(--primary);"></i> Practice stress-reduction techniques</li>
+                   </u1>
+                 </div>
+               </div>
+
+                <div class="card">
+                  <h3 class="card-title"><i class="fas fa-notes-medical"></i>Recent Symptoms</h3>
+                  <div class="history-item">
+                    <div>
+                      <div class="history-query">Severe headache</div>
+                      <div class="history-date">March 15, 2024</div>
+                    </div>
+                    <i class="fas fa-chevron-right history-action"></i>
+                  </div>
+                  <div class="history-item">
+                    <div>
+                      <div class="history-query">Nausea</div>
+                      <div class="history-date">March 14, 2024</div>
+                    </div>
+                    <i class=
+                  
+                   
+                   
+            
+          
+
+              
+              
+            
+              
+            
+            
             
               
             
