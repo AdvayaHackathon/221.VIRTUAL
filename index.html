@@ -124,6 +124,52 @@
       background-color: var(--light-gray);
       color: var(--gray);
       display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .step-label {
+      font-size: 0.9rem;
+      color: var(--gray);
+      text-align: center;
+      max-width: 100px;
+    }
+
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: var(--light-gray);
+      z-index: 0;
+    }
+
+    .progress-bar .active .step-number { 
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+    }
+
+    .progress-bar .completed .step-number {
+      background-color: var(--success);
+      color: white;
+    }
+
+    .form-section {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 30px;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 30px;
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
       
       
       
