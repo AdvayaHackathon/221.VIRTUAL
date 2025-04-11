@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewportt" content="width=device-width, initial-scale=1.0">
     <title>HealthInsight - Smart Medication Advisor</title>
-    <link href="https://fonts.googleapis.com/css2?>family=Poppins:wght@300;400;500;600;700;&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdjns.couldflare.com/ajax/libs/fonts-awesome/6.0.0/css/all.min.css">
+    <link href="#">
+    <link rel="stylesheet" href="#">
     <style>
       :root {
         --primary: #2b6cb0;
@@ -80,7 +80,220 @@
       }
 
       .nav-links a:hover {
-          color: var(--primary
+          color: var(--primary);
+      }
+
+      .nav-links a ::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: var(--transition);
+      }
+
+      .nav-links a:hover::after {
+          width: 100%;
+      }
+
+      .auth-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+          padding: 0.6rem 1.2rem;
+          border-radius: var(--border-radius);
+          font-weight: 500;
+          cursor: pointer;
+          transition: var(--transition);
+          border: none:
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 1px solid var (--primary);
+      }
+
+      .btn-outline:hover {
+        background: var(--primary-light);
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--secondary);
+        transform: translayeY(-2px);
+        box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+      }
+
+      .btn a{
+        color: inherit;
+        text-decoration: none;
+
+      }
+
+      /* Hero Section */
+      .hero { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center:
+        padding: 6rem 2rem;
+        background: linear-gradient(135deg, #f7fafc, #ebf8ff);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('#')
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--dark);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--gray);
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 5rem 2rem;
+        background: white;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+        color: var(--dark);
+        margin-bottom: 1rem;
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+        color: var(--dark);
+        margin-bottom: 1rem;
+      }
+
+      .section-title p {
+        color: var(--gray);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+        border: 1px solid var(--light-gray);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: cemter;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        font-size: 1.5rem;
+      }
+
+      .features-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .feature-card p {
+        color: var(--gray);
+        line-height: 1.7;
+      }
+
+      /* How It Works */
+      .how-it-works {
+        padding: 5rem 2rem;
+        background: var(--light);
+      }
+      
+      .steps {
+        display: flex;
+        justify-content: center:
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 3rem auto 0;
+        flex-wrap: wrap;
+      }
+
+      .step {
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center
           
     </style>
   </head>
@@ -90,7 +303,7 @@
             <img src="#"
             <span class="logo-text">Health-Insight</div>span>
     </div>
-    <div class='nav-links">
+    <div class='nav-links'>
         <a href= "#features">Features</a>
         <a href= "#how-it-works">How It Works</a>
         <a href= "#testimonials">Testimonials</a>
@@ -333,24 +546,28 @@
       const switchToSignup = document.getElementById('switch-to-signup');
       const switchToLogin = document.getElementById('switch-to-login);
 
+      // Open login modal
 function openLoginModal() {
     loginModal.style.display = 'flex';
     signupModal.style.display = 'none';
     document.body.style.overflow = 'hidden';
 }
 
+      // Open signup modal
 function openSignupModal() {
   signupModal.style.display = 'flex';
   loginModal.style.display = 'none';
   document.body.style.overflow = 'hidden';
 }
 
+      // Close modlas
 function closeModals() {
   loginModal.style.display = 'none';
   signupModal.style.display = 'none';
   document.body.style.style.overflow = 'auto';
 }
 
+      // Event Listeners
 loginBtn.addEventListener('click', openLoginModal);
 signupBtn.addEventListener('click', openSignupModal);
 heroCta.addEventListener('click', openSignupModal);
@@ -370,25 +587,28 @@ switchToLogin.addEventListener('click', function(e) {
     openLoginModal();
 });
 
+// Close modal when clicking outsidde
 window.addEventListener('click', function(e) {
   if (e.target === loginModal || e.target === signupModal) {
       closeModals();
 });
 
+// Form submissions 
 document.getElementById('login-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
+    // Add your login logic here
     alert('Login functionality will be implemented!');
     closeModals();
 });
 
 document.getElementById('signup-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
+    // Add your signup logic here
     alert('Signup functionality will be implemented!');
     closeModals();
 });
 
+  //Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click',function(e) {
         e.preventDefault();
