@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>HealthInsight | Profile</title>
+    <style>
+      
+    </style>
   </head>
       <body>
       <div class="container">
@@ -216,24 +219,67 @@
                   <i class="fas fa-pill"></i>
                 </div>
                 <div class="medication-info">
-                  <div class="
+                  <div class="medication-name">Sumatriptan</div>
+                  <div class="medication-dosage">50mg tablet</div>
+                </div>
+                <div class="medication-time">
+                  <i class="far fa-clock"></i> At onset
+                </div>
+              </div>
+              <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;">
+                <i class=fas fa-plus-circle"></i> Add Medication
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          
+    <script>
+      function toggleMenu() {
+        document.getElementById('profileMenu').classList.toggle('show');
+      }
 
-                
-                  
-                   
-                   
-            
-          
+      fumction toggleNotifications() {
+        alert('Notifications panel will appear here');
+      }
 
-              
-              
-            
-              
-            
-            
-            
-              
-            
+      window.onclick = function(event) {
+        if(levent.target.matches('.action-btn') && levent.target.closest('.action-btn')) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for(let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if(openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+      function editDetails() {
+        alert('Edit profile feature will be implemented soon!');
+      }
+
+      function switchTab(tabId) {
+        const tabContents = document.getElementsByClassName('tab-content');
+        for(let i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove('active');
+        }
+
+        const tabs = document.getElementsByClassName('tab');
+        for(let i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove('active');
+        }
+
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+      }
+
+      window.onload = function() {
+        const name = document.getElementById('userName').textContent;
+        const initials = name.split(' ').map(n => n[0].join('');
+        document.getElementById('profileAvatar').textContent = initials;
+
+      }    
+    </script>
+  </body>
 </html>
