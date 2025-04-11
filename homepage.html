@@ -310,8 +310,101 @@
           </div>
           <div class="form-group">
               <label for="signup-confirm">Confirm Password</label>
-              <input type="submit" class="btn btn-primary btn-block"Create
+              <input type="password" id="signup-confirm" class="form-control" placeholder="********" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+          <div class="form-footer">
+              Already have an Account? <a href="#" id="switch-to-login">Sign in</a>
+          </div>
+      </form>
+  </div>
+</div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const loginBtn = document.getElementById('login-btn');
+      const signupBtn = document.getElementById('signup-btn');
+      const heroCta = document.getElementById('hero-cta');
+      const ctaBtn = document.getElementById('cta-btn');
+      const loginModal = document.getElementById('login-modal');
+      const signupmodal = document.getElementById('signup-modal');
+      const closeModalBtns = document.querySelectorAll('.close-modal');
+      const switchToSignup = document.getElementById('switch-to-signup');
+      const switchToLogin = document.getElementById('switch-to-login);
+
+function openLoginModal() {
+    loginModal.style.display = 'flex';
+    signupModal.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+}
+
+function openSignupModal() {
+  signupModal.style.display = 'flex';
+  loginModal.style.display = 'none';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModals() {
+  loginModal.style.display = 'none';
+  signupModal.style.display = 'none';
+  document.body.style.style.overflow = 'auto';
+}
+
+loginBtn.addEventListener('click', openLoginModal);
+signupBtn.addEventListener('click', openSignupModal);
+heroCta.addEventListener('click', openSignupModal);
+ctaBtn.addEventListener('click', openSignupmodal
+
+closeModalBtns.forEach(btn => {
+    btn.addEventListener('click', closeModals);
+});
+
+switchToSignup.addEventListener('click', functions(e) {
+    e.preventDefault();
+    openSignupModal();
+});
+
+switchToLogin.addEventListener('click', function(e) {
+    e.preventDefault();
+    openLoginModal();
+});
+
+window.addEventListener('click', function(e) {
+  if (e.target === loginModal || e.target === signupModal) {
+      closeModals();
+});
+
+document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    alert('Login functionality will be implemented!');
+    closeModals();
+});
+
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    alert('Signup functionality will be implemented!');
+    closeModals();
+});
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click',function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targtedId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntroView({
+                behavior: 'smooth'
+            });
+        }
+      });
+  });
+});
+</script>
   </body>
 </html>
 
