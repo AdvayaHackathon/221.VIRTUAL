@@ -219,7 +219,7 @@
     }
 
     .checkbox-gorup{
-      diaplay: flex;
+      display: flex;
       flex-wrap: wrap;
       gap: 15px;
     }
@@ -281,7 +281,7 @@
       border-radius: var(--border-radius);
       padding:20px;
       margin-bottom: 20px;
-      box-shodow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
       border-left: 4px solid var(--primary);
     }
     .medication-header{
@@ -403,9 +403,9 @@
       }
       .btn-group{
         flex-direction: column;
-        gap 10px;
+        gap; 10px;
       }
-      .btn:{
+      .btn{
         width: 100%;
       }
 
@@ -839,7 +839,7 @@
       });
 
       // Add a note about real implementation
-      const noteCard = document.createElement('div);
+      const noteCard = document.createElement('div');
       noteCard.className = 'medication-card';
       noteCard.innerHTML = `
         <h3 class="medication-name"><i class="fas fa-info-circle-"></i> Note About This Demo</h3>
@@ -879,7 +879,7 @@
               allMedications.push({
                 name: 'Ibuprofen (Advil, Motrin)',
                 type: 'Over-the-counter',
-                purpose: 'Pain relief, fever reduction', and anti-inflammatory',
+                purpose: 'Pain relief, fever reduction, and anti-inflammatory',
                 dosage: '200-400mg every 4-6 hours as needed',
                 sideEffects: ['Stomach upset', Increased bleeding risk', 'Kidney problems'],
                 warnings: conditions.includes('kidney disease') ? ['Not recommended for people with kidney diseases'] : [],
@@ -908,7 +908,7 @@
                 type: 'Over-the-counter',
                 purpose: 'Pain relief, fever reduction', 
                 dosage: '200-400mg every 6-8 hours as needed',
-                sideEffects: ['Stomach upset', Increased bleeding risk', 'Kidney problems'],
+                sideEffects: ['Stomach upset', 'Increased bleeding risk', 'Kidney problems'],
                 warnings: [],
                 interactions: ['Asprin', 'Blood pressure medications'],
                 link: 'https://www.drugs.com/ibuprofen.html'
@@ -923,7 +923,7 @@
                 type: 'Over-the-counter',
                 purpose: 'Cough Suppression and mucus relief',
                 dosage: '10-20ml every 4 hours as needed',
-                sideEffects: ['Drowsiness', 'Dizziness', Nausea'],
+                sideEffects: ['Drowsiness', 'Dizziness', 'Nausea'],
                 warnings: [],
                 interactions: ['MAO inhibitors', 'Other cough medicines'],
                 link: 'https://www.drugs.com/robitussin-dm.html'
@@ -941,7 +941,7 @@
               });
           }
           
-          if (primarySympton === 'sore thorat')) {
+          if (primarySympton === 'sore thorat') {
               allMedications.push({
                 name: 'Benzocaine (Chloraseptic)',
                 type: 'Over-the-counter',
@@ -966,7 +966,7 @@
                 link: 'https://www.drugs.com/famotidine.html'
               });
 
-          if (!conditions.includes(kidney disease')) 
+          if (!conditions.includes('kidney disease')) 
           {
               allMedications.push({
                 name: 'Omeprazole (prilosec OTC)',
@@ -1024,6 +1024,7 @@
           return true;
         });
         }
+    });
           
       
 
