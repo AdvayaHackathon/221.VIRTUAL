@@ -453,6 +453,7 @@
         <div class="step-number">3</div>
         <div class="step-label">Medication Results</div>
       </div>
+    </div>
 
       <form id="medicationForm">
         <div class="form-section active"id="symptoms-section">
@@ -606,7 +607,35 @@
             <p>Searching for medication recommendations based on your symptoms...</p>
           </div>
 
-          <
+          <div class="results-container" id="resultsCountainer">
+            <div id="medicationResults"></div>
+
+            <div class="disclaimer">
+              <p><strong>Disclaimer:</strong>These medicaiton recommedations are provided for invormational purpose only constitute over the counter medical advice.Always consult with a qualified healthcare provider before starting any new medication</p>
+              <p>Results are powered by Drugs.com's database and are not endorsed by Health-Insight</p>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-online prev-btn">
+              <i class="fa fa-arrow-left"></i> Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="new-search-btn">
+              <i class="fa fa-redo"></i> New Search
+            </button>
+            <button type="button" class="btn btn-online prev-btn" id="print-btn">
+              print Recommendations
+            </button>
+          </div>
+        </div>
+      </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Health-Insight &copy; 2025 | This tool is for educational purposes only | Powered by Drugs.com API </p>
+  </footer>
+            
 
           
 
