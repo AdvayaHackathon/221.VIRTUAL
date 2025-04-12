@@ -841,10 +841,143 @@
       // Add a note about real implementation
       const noteCard = document.createElement('div);
       noteCard.className = 'medication-card';
-      noteCard.innerHTML = '
+      noteCard.innerHTML = `
         <h3 class="medication-name"><i class="fas fa-info-circle-"></i> Note About This Demo</h3>
         <div class="medication-details">
             <p>In a real implementation, this section would display actual medication data from Drugs.com's API based on your symptoms and health history. The results above are simulated for demonstration purposes.</p>
+            <p>To implement this with Drugs.com API key</li>
+            <ol>
+                <li>Register for a Drugs.com API key</li>
+                <li>Make API calls to their medications database</li>
+                <li>Filter results based on user's health profile</li>
+                <li>Display the returned medication information</li>
+            </ol>
+            <p>Drugs.com provides comprehensive drug information including side effects, interactions, and dosage guidelines :cite[1].</p>
+        </div>
+      `;
+      medicationResults.appendChild(noteCard);
+    }
+
+    // Get medications based on symptoms (mock data)
+    function getMedicationsForSymptoms(primarySymtom, additionalSymptoms, conditions) {
+      const allMedications = [];
+
+      // Base medications on primary symptom 
+      if (primarySymptom === 'headache') {
+          allMedications.push({
+              name: 'Acetaminophen (Tylenol)',
+              type: 'Over-the-counter',
+              purpose: 'Pain relief and fever reduction',
+              dosage: '500-1000mg every 4-6 hours as needed (max 4000mg/day)',
+              sideEffects: ['Liver damage (if overdosed)', 'Allergic reactions'],
+              warnings: conditions.includes('liver disease') ? ['Not recommended for people with liver diseases'] : [],
+              interactions: ['Alcohol', 'Warfarin'],
+              link: 'https://www.drugs.com/acetaminophen.html'
+          });
+
+          if (!additionalSymptoms.includes('fever') && !conditions.includes('liver diseases')) {
+              allMedications.push({
+                name: 'Ibuprofen (Advil, Motrin)',
+                type: 'Over-the-counter',
+                purpose: 'Pain relief, fever reduction', and anti-inflammatory',
+                dosage: '200-400mg every 4-6 hours as needed',
+                sideEffects: ['Stomach upset', Increased bleeding risk', 'Kidney problems'],
+                warnings: conditions.includes('kidney disease') ? ['Not recommended for people with kidney diseases'] : [],
+                interactions: ['Asprin', 'Blood pressure medications'],
+                link: 'https://www.drugs.com/ibuprofen.html'
+              });
+          }
+      }
+
+      if (primarySymptoms. ==='fever' || additionalSymptoms.includes('fever')) {
+              allMedications.push({
+                name: 'Acetaminophen (Tylenol)',
+                type: 'Over-the-counter',
+                purpose: 'Pain relief and fever reduction',
+                dosage: '500-1000mg every 4-6 hours as needed (max 4000mg/day)',
+                sideEffects: ['Liver damage (if overdosed)', 'Allergic reactions'],
+                warnings: conditions.includes('liver disease') ? ['Not recommended for people with liver diseases'] : [],
+                interactions: ['Alcohol', 'Warfarin'],
+                link: 'https://www.drugs.com/acetaminophen.html'
+              });
+
+        if (!conditions.include('kidney disease')) {
+              allMedications.push({
+                name: 'Ibuprofen (Advil, Motrin)',
+                type: 'Over-the-counter',
+                purpose: 'Pain relief, fever reduction', 
+                dosage: '200-400mg every 6-8 hours as needed',
+                sideEffects: ['Stomach upset', Increased bleeding risk', 'Kidney problems'],
+                warnings: [],
+                interactions: ['Asprin', 'Blood pressure medications'],
+                link: 'https://www.drugs.com/ibuprofen.html'
+              });
+        }
+      }
+    }
+        if (primarySymtom === 'cough') {
+          if (additionalSymptoms.includes('nasal congestion')) {
+              allMedications.push({
+                name: 'Dextromethorphan/Guaifenesin (Robitussin DM)',
+                type: 'Over-the-counter',
+                purpose: 'Cough Suppression and mucus relief',
+                dosage: '10-20ml every 4 hours as needed',
+                sideEffects: ['Drowsiness', 'Dizziness', Nausea'],
+                warnings: [],
+                interactions: ['MAO inhibitors', 'Other cough medicines'],
+                link: 'https://www.drugs.com/robitussin-dm.html'
+              });
+          } else {
+              allMedications.push({
+                name: 'Dextromethorphan (Delsym)',
+                type: 'Over-the-counter',
+                purpose: 'Cough suppression',
+                dosage: '10-20mg every 4 hours as needed',
+                sideEffects: ['Drowsiness', 'Dizziness'],
+                warnings: [],
+                interactions: ['MAO inhibitors', 'Other cough medicines'],
+                link: 'https://www.drugs.com/dextromethorphan.html'
+              });
+          }
+          
+          if (primarySympton === 'sore thorat')) {
+              allMedications.push({
+                name: 'Benzocaine (Chloraseptic)',
+                type: 'Over-the-counter',
+                purpose: 'Sore thorat pain relief',
+                dosage: 'Spray or lozenge as directed every 2 hours',
+                sideEffects: ['Mild stinging', 'Numbness'],
+                warnings: [],
+                interactions: ['MAO inhibitors', 'Other cough medicines'],
+                link: 'https://www.drugs.com/chloraseptic.html'
+              });
+          }
+
+          if (primarySympton === 'heartburn') {
+              allMedications.push({
+                name: 'famotidine (Pepcid)',
+                type: 'Over-the-counter',
+                purpose: 'Heartburn relief',
+                dosage: '10-20mg every 12 hours as needed',
+                sideEffects: ['Headache', 'Constipation', 'Diarrhea'],
+                warnings: [],
+                interactions: ['Atazanavir', 'Dasatinib'],
+                link: 'https://www.drugs.com/famotidine.html'
+              });
+
+          if (!conditions.includes(kidney disease')) {
+              allMedications.push({
+                name: 'Omeprazole (prilosec OTC)',
+                type: 'Over-the-counter',
+                purpose: 'Sore thorat pain relief',
+                dosage: 'Spray or lozenge as directed every 2 hours',
+                sideEffects: ['Mild stinging', 'Numbness'],
+                warnings: [],
+                interactions: ['MAO inhibitors', 'Other cough medicines'],
+                link: 'https://www.drugs.com/chloraseptic.html'
+              });
+
+          
 
 
 
