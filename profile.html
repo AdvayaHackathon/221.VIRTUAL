@@ -94,13 +94,13 @@
         right: 8px;
         width: 16px;
         height: 16px;
-        backgroumd: var(--success);
+        background: var(--success);
         border-radius: 50%;
         border: 2px solid white;
       }
 
       .user-info {
-        flex 1;
+        flex: 1;
       }
 
       .user-name {
@@ -353,7 +353,7 @@
 
       .grid-container {
         display: grid;
-        grid-template--columns: 1fr;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
       }
 
@@ -706,7 +706,7 @@
         document.getElementById('profileMenu').classList.toggle('show');
       }
 
-      fumction toggleNotifications() {
+      function toggleNotifications() {
         alert('Notifications panel will appear here');
       }
 
@@ -743,7 +743,7 @@
 
       window.onload = function() {
         const name = document.getElementById('userName').textContent;
-        const initials = name.split(' ').map(n => n[0].join('');
+        const initials = name.split(' ').map(n => n[0].join(''));
         document.getElementById('profileAvatar').textContent = initials;
 
       }    
