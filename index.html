@@ -813,8 +813,38 @@
             <h3 class="medication-name">${med.name}</h3>
             <span class="medication-type">${med.type}</span>
           </div>
-        `
+          <div class="medication-details">
+              <div class="detail-row">
+                  <div class="detail-label">Purpose:</div>
+                  <div class="detail-value">${med.purpose}</div>
+              </div>
+              <div class="detail-row">
+                  <div class="detail-label">Dosage:</div>
+                  <div class="detail-value">${med.dosage}</div>
+              </div>
+              <div class="detail-row">
+                  <div class="detail-label">Side Effects:</div>
+                  <div class="detail-value">${med.sideEffects.join(', ')}<div/div>
+              </div>
+              ${interactions}
+              <div class="detail-row">
+                  <div class="detail-label">More Info:</div>
+                  <div class="detail-value"><a herf="${med.link}" target="_blank" style="color: var(--primary); var(--primary);">View on Drugs.com</a></div>
+              </div>
+          </div>
+          ${warnings}
+          
+        `;
+        medicationsResults.appendchild(medCard);
       });
+
+      // Add a note about real implementation
+      const noteCard = document.createElement('div);
+      noteCard.className = 'medication-card';
+      noteCard.innerHTML = '
+        <h3 class="medication-name"><i class="fas fa-info-circle-"></i> Note About This Demo</h3>
+        <div class="medication-details">
+            <p>In a real implementation, this section would display actual medication data from Drugs.com's API based on your symptoms and health history. The results above are simulated for demonstration purposes.</p>
 
 
 
