@@ -634,7 +634,194 @@
   <footer>
     <div class="container">
       <p>Health-Insight &copy; 2025 | This tool is for educational purposes only | Powered by Drugs.com API </p>
+    </div>   
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const formSections = document.querySelectorAll('.form-section');
+      const progressSteps = document.querySelectorAll('.progress-step');
+      const nextButtons = document.querySelectorAll('.next-btn');
+      const prevButtons = document.querySelectorAll('.prev-btn');
+      const searchButton = document.getElementById('search-btn');
+      const newSearchButton = document.getElementById('new-search-btn');
+      const loadingSpinner = document.getElementById('loadingSpinner');
+      const resultsContainer = document.getElementById('resultsContainer');
+      const medicationResults = document.getElementById('medicationResults');
+      const printButton = document.getElementById('print-btn');
+
+      let currentSection = 0;
+
+      nextButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          if(validateSection(currentSection)) {
+            navigateToSection(currentSection + 1);
+          }
+        });
+      });
+
+      prevButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          navigateToSection(currentSection - 1);
+        });
+      });
+
+      searchButton.addEvenetListener('click', function() {
+        if(validateSection(currentSection)) {
+          navigateToSection(currentSection + 1);
+          searchDrugsCom();
+        }
+      });
+
+      newSearchButton.addEventListener('click', function() {
+        navigateToSection(0);
+        document.getElementById('medicationForm').reset();
+        medicationResults.innerHTML = '';
+
+        progressSteps.forEach(step => {
+          step.classList.remove('completed');
+          if (step.dataset.step === "1") {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+          }
+        });
+      });
+
+      printButton.addEventListener('click',function(){
+        window.print();
+      });
+
+      printButton.addEventListener('click',function() {
+        window.print();
+      });
+
+      function navigateToSection(sectionIndex){
+        formSections[currentSection].classList.remove('active');
+        progressSteps[currentSection].classList.remove('active');
+
+        currentSection = sectionIndex;
+
+        formSetting[currentSection].classlist.add('active');
+        progressSteps[currentSection].classlist.add('active');
+
+        for(let i=0; i< sectionIndex; i++){
+          progressSteps[i].classList.add('completed');
+        }
+      }
+
+      function validateSection(sectionIndex){
+        const currentSection = formSections[sectionIndex];
+        const requiredInputs = currentSections.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredInputs.forEach(Input =>{
+          if (!input.value){
+            input.style.borderColor = 'var(--danger)';
+            isValid = false;
+
+            input.addEventListener('input',function(){
+              this.style.borderColor = 'var(--light-gray)';
+            });
+          }
+        });
+
+        if(!isValid){
+          alert('Please fill out all required fields before proceeding.');
+        }
+
+        return isValid;
+    }
+
+    function searchDrugsCom(){
+
+      loadingSpinner.style.display='block';
+      resultsContainer.style.display='none';
+
+      const primarySymptom = document.getElementVyId('primarysymoptom').value;
+      const additionalSymptoms = Array.form(document.querySelectorAll('input[name="symptoms"]:checked')).map(el=>el.value);
+      const duration=document.getElementById('symptomDuration').value;
+      const severity=document.getElementById('symptomSeverity').value;
+      const age=document.getElementById('age').value;
+      const gender=document.getElementById('gender').value;
+      const conditions=Array.form(document.querySelectorAll('input[name="conditions"]:checked')).map(el=>el.value);
+      const currentMeds=document.getElementById('currentMeds').value;
+      const allergies=document.getElementById('allergies').value;
+
+      const searchParams={
+        primarySymptom: primarySymptom,
+        additionalSymptom: additionalSymptoms,
+        duration: duration,
+        severity: severity,
+        age: age,
+        gender: gender,
+        conditions: conditions,
+        currentMeds: currentMeds,
+        allergies: allergies
+      };
+
+      console.log("search parameters:", searchParams);
+
+      SetTimeout(()=>{
+        loadingSpinner.style.display='none';
+        resultContainer.style.display='block';
+
+        displayMedicationResults(searchParams);
+      },2000);
+    }
+
+    function displayMedicationResults(params){
+      medicationResults.innerHTML='';
+
+      const medications = getMedicationsForSymptoms(params.primaryymptom, params.additionlSymptoms, params.conditions);
+
+      if(medications.length===0){
+        const noResults=document.createElement('div');
+        noResults.className='medication-card';
+        noResults.innerHtml=`
+          <h3 class="medication-name">No specific medication found</h3>
+          <div class="medication-details">
+            <p>Based on your symptoms and health history, we coudn't find specific medication recommendations.</p>
+            <p>Consider consulting with a healthcare provider for personalized advice.</p>
+          </div>
+        `;
+        medicationResults.appendChild(noResults);
+        return;
+      }
+
+      medications.forEach(med=>{
+        const medCard = document.createElement('div');
+        medCard.className='medication-card';
+
+        let warning='';
+        if (med.warnings && med.interactions.length > 0){
+          warnings=`<div class="medication-details warning">Warnings: ${med.warnings.join(' ')}</div>`
+        }
+
+        let interactions='';
+        if (med.interactions && med.interactions.length >0){
+          interactions=`
+            <div class="detail-row">
+              <div class="detail-label">Interactions:</div>
+              <div class="detail-value">${med.interactions.join(',')}</div>
+            </div>
+          `;
+        }
+
+        medCard.innerHTML =`
+          <div class ="medication-header">
+            <h3 class="medication-name">${med.name}</h3>
+            <span class="medication-type">${med.type}</span>
+          </div>
+        `
+      });
+
+
+
+
+
+      
+  </script>
             
 
           
