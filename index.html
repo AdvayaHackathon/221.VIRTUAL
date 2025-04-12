@@ -889,7 +889,8 @@
           }
       }
 
-      if (primarySymptoms. ==='fever' || additionalSymptoms.includes('fever')) {
+      if (primarySymptoms. ==='fever' || additionalSymptoms.includes('fever')) 
+      {
               allMedications.push({
                 name: 'Acetaminophen (Tylenol)',
                 type: 'Over-the-counter',
@@ -965,7 +966,8 @@
                 link: 'https://www.drugs.com/famotidine.html'
               });
 
-          if (!conditions.includes(kidney disease')) {
+          if (!conditions.includes(kidney disease')) 
+          {
               allMedications.push({
                 name: 'Omeprazole (prilosec OTC)',
                 type: 'Over-the-counter',
@@ -976,6 +978,54 @@
                 interactions: ['MAO inhibitors', 'Other cough medicines'],
                 link: 'https://www.drugs.com/chloraseptic.html'
               });
+          }
+        }
+
+        if(primarySymptom==='diarrhea'){
+          allMedications.push({
+            name: 'Loperamide (Imodium)',
+            type: 'Over-the-counter',
+            purpose: 'Diarrhea relief',
+            dosage: '2mg after first loose stool, then 1mg after each subsequent stool (max 8mg/24hr)',
+            sideEffects: ['Constipation', 'dizziness','Drowsiness'],
+            warnings: ['Do not use if you hav fever or bloody stools'],
+            interactions: ['Quindine', 'Ritonavir'],
+            link: 'https://www.drugs.com/chloraseptic.html'
+          });
+        }
+
+         if(primarySymptom==='constipation'){
+          allMedications.push({
+            name: 'Polyethlene Glycol (Miralx)',
+            type: 'Over-the-counter',
+            purpose: 'Constipation relief',
+            dosage: '17g powder in 4-8oz liquid daily',
+            sideEffects: ['Bloating', 'Gas','Nausea'],
+            warnings: conditions.includes('pregnant')?['Consult doctor before use if pregnant']: [],
+            interactions: [],
+            link: 'https://www.drugs.com/chloraseptic.html'
+          });
+        }
+
+        if(primarySymptom==='rash'){
+          allMedications.push({
+            name: 'Hydrocortisone cream 1%',
+            type: 'Over-the-counter',
+            purpose: 'Itvh and rash relief',
+            dosage: 'Apply thin layer to affected area 1-2 times daily',
+            sideEffects: ['Skin thinning (with prolonged use)', 'Burning sensation'],
+            warnings: ['Do not use on face or genitals unless directed by doctors'],
+            interactions: [],
+            link: 'https://www.drugs.com/chloraseptic.html'
+          });
+        }
+
+        return allMedications.filter(med=>{
+          return true;
+        });
+        }
+          
+      
 
           
 
